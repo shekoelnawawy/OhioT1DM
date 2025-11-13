@@ -27,12 +27,12 @@ def main():
     # 4. Copy data
     """Run a shell command and print output in real time."""
     print("\n>>> Running: cp -r ~/Downloads/OhioT1DM/processed_data/20* .")
-    shutil.copytree("/home/mnawawy/Downloads/OhioT1DM/processed_data/2020data", base_dir, dirs_exist_ok=True)
-    shutil.copytree("/home/mnawawy/Downloads/OhioT1DM/processed_data/2018data", base_dir, dirs_exist_ok=True)
+    shutil.copytree("/home/mnawawy/Downloads/OhioT1DM/processed_data/2020data", base_dir+"/2020data", dirs_exist_ok=True)
+    shutil.copytree("/home/mnawawy/Downloads/OhioT1DM/processed_data/2018data", base_dir+"/2018data", dirs_exist_ok=True)
     # 5. Copy pretrained models
     """Run a shell command and print output in real time."""
     print("\n>>> Running: cp -r ~/Downloads/OhioT1DM/models/PRETRAINS .")
-    shutil.copytree("/home/mnawawy/Downloads/OhioT1DM/models/PRETRAINS", base_dir, dirs_exist_ok=True)
+    shutil.copytree("/home/mnawawy/Downloads/OhioT1DM/models/PRETRAINS", base_dir+"/PRETRAINS", dirs_exist_ok=True)
 
     # 6. Change directory to URET
     os.chdir("URET")
