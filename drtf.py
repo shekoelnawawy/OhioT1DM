@@ -931,11 +931,11 @@ def ordered_data(num_samples, backcast_length, forecast_length, dataa):
 
 if __name__ == '__main__':
 	# Nawawy's start
-    # Parse arguments.
-    if len(sys.argv) != 2:
-        raise Exception('Include the subset year as argument, e.g., python drtf.py 2020')
+	# Parse arguments.
+	if len(sys.argv) != 2:
+		raise Exception('Include the subset year as argument, e.g., python drtf.py 2020')
 
-    year = sys.argv[1]
+	year = sys.argv[1]
 	# Nawawy's end
 	main()
 	
