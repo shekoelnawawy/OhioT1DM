@@ -27,7 +27,7 @@ python setup.py
 source myvenv/bin/activate
 ```
 
-3. Run the model ```python drtf.py <year> <output_directory> ```
+3. Run the model: ```python drtf.py <year> <output_directory> ```
 ```
 python drtf.py 2018 output_2018
 ```
