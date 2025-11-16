@@ -64,12 +64,8 @@ outstr='TEST'
 PERSUBJECT=True
 
 # Nawawy's start
-year = '2020'
-if year == '2020':
-	subjects=['540','544','552','567','584','596']	#2020
-elif year == 2018:
-	subjects=['559','563','570','575','588','591']	#2018
-
+subjects = []
+#subjects=['540','544','552','567','584','596']
 # Nawawy's end
 
 loopsthrough=1
@@ -96,6 +92,13 @@ backcastopts=[2,3,4,5,6,7]
 	
 #################################### MAIN SECTION ############################################
 def main():
+	# Nawawy's start
+	global subjects
+	if year == '2018':
+        subjects = ['559', '563', '570', '575', '588', '591']  # 2018
+    elif year == '2020':
+        subjects = ['540', '544', '552', '567', '584', '596']  # 2020
+    # Nawawy's end
 	maindir = os.getcwd()+'/'+outstr
 
 	os.makedirs(maindir)
@@ -927,6 +930,13 @@ def ordered_data(num_samples, backcast_length, forecast_length, dataa):
 
 
 if __name__ == '__main__':
+	# Nawawy's start
+    # Parse arguments.
+    if len(sys.argv) != 2:
+        raise Exception('Include the subset year as argument, e.g., python drtf.py 2020')
+
+    year = sys.argv[1]
+	# Nawawy's end
 	main()
 	
 	
