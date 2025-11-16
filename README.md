@@ -29,5 +29,9 @@ source myvenv/bin/activate
 
 3. Run the model
 ```
-python drtf.py
+python drtf.py 2018
+```
+or
+```
+python drtf.py 2020
 ```
