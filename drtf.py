@@ -93,9 +93,9 @@ backcastopts=[2,3,4,5,6,7]
 def main():
 	# Nawawy's start
 	global subjects
-	if year == '2018':
+	if year == '2018data':
 		subjects = ['559', '563', '570', '575', '588', '591']  # 2018
-	elif year == '2020':
+	elif year == '2020data':
 		subjects = ['540', '544', '552', '567', '584', '596']  # 2020
 	# Nawawy's end
 	maindir = os.getcwd()+'/'+outstr
@@ -716,14 +716,14 @@ def makedata(totallength, sub):
 	stored_trains = {}
 	# first load train data
 	# Nawawy's start
-	for f in os.listdir(year+'data'):
+	for f in os.listdir(year):
 	# Nawawy's end
 		if f.endswith('train.pkl'):
 			if not sub == 99:
 				if not f[:3] == subjects[sub]:
 					continue
 			# Nawawy's start
-			a = joblib.load(year+'data/' + f)
+			a = joblib.load(year+'/' + f)
 			# Nawawy's end
 			g = np.asarray(a['glucose'])
 			b = np.asarray(a['basal'])
@@ -757,14 +757,14 @@ def makedata(totallength, sub):
 			# store to use in test for end
 			stored_trains[f] = x.copy()
 	# Nawawy's start
-	for f in os.listdir(year+'data'):
+	for f in os.listdir(year):
 	# Nawawy's end
 		if f.endswith('test.pkl'):
 			if not sub == 99:
 				if not f[:3] == subjects[sub]:
 					continue
 			# Nawawy's start
-			a = joblib.load(year+'data/' + f)
+			a = joblib.load(year+'/' + f)
 			# Nawawy's end
 			g = np.asarray(a['glucose'])
 			b = np.asarray(a['basal'])
@@ -932,7 +932,7 @@ if __name__ == '__main__':
 	# Nawawy's start
 	# Parse arguments.
 	if len(sys.argv) != 3:
-		raise Exception('Include the subset year and output directory as arguments, e.g., python drtf.py 2020 output_2020')
+		raise Exception('Include the input and output directories as arguments, e.g., python drtf.py 2020data output_2020')
 
 	year = sys.argv[1]
 	outstr = sys.argv[2]
