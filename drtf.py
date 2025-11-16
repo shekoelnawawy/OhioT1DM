@@ -56,16 +56,15 @@ PTDIR='PRETRAINS/drtf_horizon6/model'
 #prediction horizon
 horizon=6#
 
-#where to save the outputs (a name for a new folder)
-outstr='TEST'
-
-
 #Do individual subject models
 PERSUBJECT=True
 
 # Nawawy's start
 subjects = []
 #subjects=['540','544','552','567','584','596']
+#where to save the outputs (a name for a new folder)
+outstr=''
+# outstr='TEST'
 # Nawawy's end
 
 loopsthrough=1
@@ -932,10 +931,11 @@ def ordered_data(num_samples, backcast_length, forecast_length, dataa):
 if __name__ == '__main__':
 	# Nawawy's start
 	# Parse arguments.
-	if len(sys.argv) != 2:
-		raise Exception('Include the subset year as argument, e.g., python drtf.py 2020')
+	if len(sys.argv) != 3:
+		raise Exception('Include the subset year and output directory as arguments, e.g., python drtf.py 2020 output_2020')
 
 	year = sys.argv[1]
+	outstr = sys.argv[2]
 	# Nawawy's end
 	main()
 	
