@@ -63,8 +63,10 @@ outstr='TEST'
 #Do individual subject models
 PERSUBJECT=True
 
+# Nawawy's start
 #subjects=['559','563','570','575','588','591']	#2018
 subjects=['540','544','552','567','584','596']	#2020
+# Nawawy's end
 
 loopsthrough=1
 if PERSUBJECT:
