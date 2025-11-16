@@ -95,10 +95,10 @@ def main():
 	# Nawawy's start
 	global subjects
 	if year == '2018':
-        subjects = ['559', '563', '570', '575', '588', '591']  # 2018
-    elif year == '2020':
-        subjects = ['540', '544', '552', '567', '584', '596']  # 2020
-    # Nawawy's end
+		subjects = ['559', '563', '570', '575', '588', '591']  # 2018
+	elif year == '2020':
+		subjects = ['540', '544', '552', '567', '584', '596']  # 2020
+	# Nawawy's end
 	maindir = os.getcwd()+'/'+outstr
 
 	os.makedirs(maindir)
