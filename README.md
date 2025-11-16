@@ -14,3 +14,20 @@ In this repository, URET is integrated and tested on the Deep Residual Time Seri
 
 The victim model was submitted to the Blood Glucose Level Prediction Challenge hosted by Ohio University and evaluated on the OhioT1DM dataset. 
 For more information on the challenge and the dataset, please check the following link: https://sites.google.com/view/kdh-2020/bglp-challenge
+
+
+## Steps to set up and run with URET integration
+1. Install requirements
+```
+python setup.py
+```
+
+2. Activate virtual environment
+```
+source myvenv/bin/activate
+```
+
+3. Run the model
+```
+python drtf.py
+```
