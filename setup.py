@@ -15,7 +15,7 @@ def main():
     venv_dir = base_dir / "myvenv"
 
     # 1. Create virtual environment
-    run_command([sys.executable, "-m", "venv", str(venv_dir)])
+    run_command(["python3.9", "-m", "venv", str(venv_dir)])
 
     # 2. Path to the virtual environment's Python
     venv_python = venv_dir / "bin" / "python"
